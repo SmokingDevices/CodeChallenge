@@ -19,7 +19,6 @@ public class RestConnector {
     private ImageService imageService;
 
     @RequestMapping(value = "/generate-image", method = RequestMethod.POST, consumes = "application/json", produces = "image/jpeg")
-
     public @ResponseBody byte[] generateImage(@RequestBody GenerateImageRequest imageRequest) {
         Image image = imageService.getImage(imageRequest);
         if (image != null) {

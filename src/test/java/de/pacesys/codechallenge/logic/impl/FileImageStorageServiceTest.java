@@ -12,7 +12,7 @@ public class FileImageStorageServiceTest {
     public void testGetImagesWithValidFiles () {
 
         FileImageStorageService storageService = new FileImageStorageService(this.getClass().getResource("/storage").getPath());
-        List<Image> images = storageService.getImages(44,"U", "UP");
+        List<Image> images = storageService.getImages(44,"U", "UP", "20180808T100000");
 
         TestCase.assertNotNull(images);
         TestCase.assertEquals(2, images.size());
@@ -23,7 +23,7 @@ public class FileImageStorageServiceTest {
     public void testGetImagesWithInValidFiles () {
 
         FileImageStorageService storageService = new FileImageStorageService(this.getClass().getResource("/storage").getPath());
-        List<Image> images = storageService.getImages(45,"U", "UP");
+        List<Image> images = storageService.getImages(45,"U", "UP", "20180808T100000");
 
         TestCase.assertNotNull(images);
         TestCase.assertEquals(0, images.size());

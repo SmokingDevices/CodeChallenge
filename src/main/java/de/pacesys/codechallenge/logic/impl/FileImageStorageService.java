@@ -25,7 +25,7 @@ public class FileImageStorageService implements IImageStorageService {
     }
 
     @Override
-    public List<Image> getImages(Integer utmZone, String latitudeBand, String gridSquare) {
+    public List<Image> getImages(Integer utmZone, String latitudeBand, String gridSquare, String date) {
         String fileNameBegin = "T"+utmZone + latitudeBand + gridSquare;
         List<Image> result = new ArrayList<>();
         File folder = new File(filePath);

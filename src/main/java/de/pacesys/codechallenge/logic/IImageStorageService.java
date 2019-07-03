@@ -4,6 +4,9 @@ import de.pacesys.codechallenge.model.Image;
 
 import java.util.List;
 
+/**
+ * i've introduced this interface because i think that there are more than one possible source for these pictures.
+ */
 public interface IImageStorageService {
 
     /**
@@ -11,7 +14,8 @@ public interface IImageStorageService {
      * @param utmZone the utmZone
      * @param latitudeBand the latitudeBand
      * @param gridSquare the gridSquare
+     * @param date the date
      * @return a list of @Image matching the given parameter
      */
-    List<Image> getImages(Integer utmZone, String latitudeBand, String gridSquare);
+    List<Image> getImages(Integer utmZone, String latitudeBand, String gridSquare, String date);
 }
